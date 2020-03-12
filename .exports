@@ -1,0 +1,26 @@
+# Configure path
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:.
+
+# Configure language and encoding
+export LANG="en_US"
+export LC_ALL="en_US.UTF-8"
+
+# Confgure editor
+export EDITOR="vim"
+export VISUAL="vim"
+
+# Configure pager
+export LESS='-F -i -J -M -x4 -X'
+export LESS_TERMCAP_mb=$'\E[1;31m'     # Begin bold
+export LESS_TERMCAP_md=$'\E[1;36m'     # Begin blink
+export LESS_TERMCAP_me=$'\E[0m'        # Reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;44;33m' # Begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'        # Reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # Begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # Reset underline
+
+# Configure GPG key for SSH
+if [[ -n "$SSH_CLIENT" ]] || [[ -n "$SSH_TTY" ]]; then
+	GPG_TTY=$(tty)
+	export GPG_TTY
+fi
