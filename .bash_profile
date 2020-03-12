@@ -1,12 +1,11 @@
-# .bash_profile
+#!/bin/bash
 
-# Get the aliases and functions
+# Define User Aliases and Functions
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/bin
-
-export PATH
+# Define User Specific Environment and Startup Programs
+if [ -f ~/.profile ]; then
+  . ~/.profile
+fi
