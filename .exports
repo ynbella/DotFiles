@@ -1,20 +1,6 @@
 # Configure path
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin:.
 
-# Configure user
-if [ -x /usr/bin/id ]; then
-    if [ -z "$EUID" ]; then
-        export EUID=`/usr/bin/id -u`
-        export UID=`/usr/bin/id -ru`
-    fi
-    export USER="`/usr/bin/id -un`"
-    export LOGNAME=$USER
-    export MAIL="/var/spool/mail/$USER"
-fi
-
-# Configure system
-export HOSTNAME=`/usr/bin/hostname 2>/dev/null`
-
 # Configure history
 export HISTSIZE=100000;
 export HISTFILESIZE=$HISTSIZE;
