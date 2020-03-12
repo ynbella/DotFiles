@@ -1,0 +1,60 @@
+# Sudo
+alias sudo='sudo '
+
+# Navigation
+alias ~='cd ~'
+alias home='cd ~'
+alias root='cd /'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# History
+alias h='history'
+alias hg='history|grep'
+alias hc='cat /dev/null > ~/.bash_history'
+
+# Compression
+alias untar='tar -zxvf '
+
+# Contents
+if ls --color > /dev/null 2>&1; then # GNU
+	LSCOLORFLAG="--color"
+else # BSD
+	LSCOLORFLAG="-G"
+fi
+alias ll='ls -lhF ${LSCOLORFLAG}'
+alias la='ls -lAhF ${LSCOLORFLAG}'
+alias ls='command ls -CF ${LSCOLORFLAG}'
+
+# Search
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Safety Nets
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias wget='wget -c'
+
+# Shell
+alias c='clear'
+alias reload='exec $SHELL'
+
+# Power
+alias halt='sudo /sbin/halt'
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias shutdown='sudo /sbin/shutdown'
+
+# Information
+alias drives='df -h'
+alias week='date +%V'
+alias path='echo -e ${PATH//:/\\n}'
+alias count='echo $(ls -1 | wc -l)'
+alias pubkey='cat ~/.ssh/id_rsa.pub'
+alias todos="ack -n --nogroup '(TODO|FIX(ME)?):'"
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
