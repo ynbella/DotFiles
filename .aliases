@@ -42,7 +42,7 @@ alias wget='wget -c'
 
 # Shell
 alias c='clear'
-alias reload='exec $SHELL'
+alias reload='clear; exec $SHELL'
 
 # Power
 alias halt='sudo /sbin/halt'
