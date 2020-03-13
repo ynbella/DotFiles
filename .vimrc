@@ -39,7 +39,6 @@ set title 			" Show the filename in the window titlebar
 
 " Rendering
 set showmatch       " Highlight matching grouping character
-set spell			" Enable spellchecking
 syntax enable		" Enable syntax highlighting
 
 " Status Bar
@@ -72,7 +71,6 @@ set mouse=a			" Enable mouse everywhere
 set mousehide     	" Hide mouse pointer while typing.
 
 " Files
-set backupdir=~/.vim/backups	" Set directory for backup files
 set autoread					" Automatically re-read unmodified files
 
 " History
